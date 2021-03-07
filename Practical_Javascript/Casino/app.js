@@ -16,13 +16,42 @@ function clearHeaderScreen() {
   header.textContent = '';
 }
 
+function userInputBoxSubmit {
+  // input box for username
+  var box = document.createElement('input');
+  box.id = 'userName';
+  // submit button to send username 
+  var subButton = document.createElement('input');
+  subButton.type = 'submit';
+
+  main.appendChild(box);
+  main.appendChild(subButton);
+
+  return 1;
+}
+
 function startGame(){
+  // Test Purpose
+  playerName = 'Ming';
+  amount = 5000;
+  // Comment out above when running real game
   clearMainScreen();
 
+  do {
+
+    main.textContent = 'How much would you like to bet?';
+
+    userInputBoxSubmit();
+
+  } while (amount > 0);
   // while amount is higher than 0 play game
   // show current balance at all time
-  // ask for betting amount
-  
+  // ask for betting amount and guessing number
+  // generate random number between 1-10
+  // if guess is correct give player 10 tens the betting amount
+  // if guess wrong deduct from balance
+  // ask to play again
+
 
 };
 
